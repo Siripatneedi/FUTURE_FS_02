@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini CRM Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<!-- Header -->
+
+<header>
+
+    <h1><i class="fa-solid fa-users"></i> Mini CRM Dashboard</h1>
+
+    <button id="logoutBtn">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        Logout
+    </button>
+
+</header>
+
+
+<!-- Dashboard Cards -->
+
+<section class="cards">
+
+    <div class="card">
+        <h3>Total Leads</h3>
+        <h2 id="totalLeads">0</h2>
+    </div>
+
+    <div class="card">
+        <h3>New</h3>
+        <h2 id="newLeads">0</h2>
+    </div>
+
+    <div class="card">
+        <h3>Contacted</h3>
+        <h2 id="contactedLeads">0</h2>
+    </div>
+
+    <div class="card">
+        <h3>Converted</h3>
+        <h2 id="convertedLeads">0</h2>
+    </div>
+
+</section>
+
+
+<!-- Add Lead Form -->
+
+<section class="form-section">
+
+    <h2>Add New Lead</h2>
+
+    <form id="leadForm">
+
+        <input
+            type="text"
+            id="name"
+            placeholder="Full Name"
+            required>
+
+        <input
+            type="email"
+            id="email"
+            placeholder="Email Address"
+            required>
+
+        <input
+            type="text"
+            id="phone"
+            placeholder="Phone Number"
+            required>
+
+        <input
+            type="text"
+            id="source"
+            placeholder="Lead Source">
+
+        <textarea
+            id="notes"
+            placeholder="Notes"></textarea>
+
+        <button type="submit">
+            Add Lead
+        </button>
+
+    </form>
+
+</section>
+
+
+<!-- Search -->
+
+<section class="search-box">
+
+    <input
+        type="text"
+        id="search"
+        placeholder="Search by Name...">
+
+</section>
+
+
+<!-- Leads Table -->
+
+<section class="table-section">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Name</th>
+
+<th>Email</th>
+
+<th>Phone</th>
+
+<th>Source</th>
+
+<th>Status</th>
+
+<th>Notes</th>
+
+<th>Actions</th>
+
+</tr>
+
+</thead>
+
+<tbody id="leadTable">
+
+<!-- Data comes from dashboard.js -->
+
+</tbody>
+
+</table>
+
+</section>
+
+
+<script src="dashboard.js"></script>
+
+</body>
+</html>
